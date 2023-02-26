@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profession_card_names",
+  "info": {
+    "singularName": "profession-card-name",
+    "pluralName": "profession-card-names",
+    "displayName": "profession_card_name",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "cardTitle": {
+      "type": "string"
+    },
+    "profession_ganeral_names": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::profession-ganeral-name.profession-ganeral-name",
+      "mappedBy": "profession_card_name"
+    }
+  }
+}

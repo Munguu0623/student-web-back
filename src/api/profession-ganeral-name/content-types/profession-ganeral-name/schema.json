@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profession_ganeral_names",
+  "info": {
+    "singularName": "profession-ganeral-name",
+    "pluralName": "profession-ganeral-names",
+    "displayName": "profession_ganeral_name",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "professionsTitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "profession_content": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profession-content.profession-content",
+      "inversedBy": "profession_ganeral_name"
+    },
+    "professionsPicture": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "profession_card_name": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::profession-card-name.profession-card-name",
+      "inversedBy": "profession_ganeral_names"
+    }
+  }
+}

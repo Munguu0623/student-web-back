@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "profession_contents",
+  "info": {
+    "singularName": "profession-content",
+    "pluralName": "profession-contents",
+    "displayName": "profession_content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "profession_ganeral_name": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::profession-ganeral-name.profession-ganeral-name",
+      "mappedBy": "profession_content"
+    },
+    "bodyContent": {
+      "type": "customField",
+      "options": {
+        "preset": "markdown"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "salary": {
+      "type": "customField",
+      "options": {
+        "preset": "markdown"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "skills": {
+      "type": "customField",
+      "options": {
+        "preset": "markdown"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "professionsPicture": {
+      "allowedTypes": [
+        "images",
+        "videos"
+      ],
+      "type": "media",
+      "multiple": true
+    }
+  }
+}

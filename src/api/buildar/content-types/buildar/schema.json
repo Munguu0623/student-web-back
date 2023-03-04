@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "buildars",
+  "info": {
+    "singularName": "buildar",
+    "pluralName": "buildars",
+    "displayName": "engineer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "richtext"
+    },
+    "cardMedia": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "content": {
+      "type": "customField",
+      "options": {
+        "preset": "markdown"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

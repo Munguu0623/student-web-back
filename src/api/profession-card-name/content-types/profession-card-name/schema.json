@@ -20,6 +20,9 @@
       "relation": "oneToMany",
       "target": "api::profession-ganeral-name.profession-ganeral-name",
       "mappedBy": "profession_card_name"
+    },
+    "slug": {
+      "type": "uid"
     }
   }
 }
